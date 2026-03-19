@@ -1,7 +1,7 @@
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, Calendar, Clock, User } from 'lucide-react';
-import { MOCK_POSTS } from './Blog';
-import { cn } from '../components/Layout';
+import { MOCK_POSTS } from '../lib/data';
+import { cn } from '../lib/utils';
 
 export default function BlogPost() {
   const { id } = useParams();

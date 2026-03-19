@@ -1,5 +1,3 @@
-import React from 'react';
-
 function GuideCard({ title, level, time }: { title: string, level: string, time: string }) {
   return (
     <div className="p-6 bg-dark-card border border-white/5 rounded-xl hover:bg-white/5 transition-colors cursor-pointer group">

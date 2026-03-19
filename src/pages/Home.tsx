@@ -1,6 +1,18 @@
-import { motion } from 'motion/react';
+import { motion, Variants } from 'motion/react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Video, Wrench, ShieldCheck, Glasses, Settings, Newspaper } from 'lucide-react';
+import { ReactNode } from 'react';
+
+interface FeatureCardProps {
+  icon: ReactNode;
+  title: string;
+  description: string;
+  link: string;
+  color: string;
+  glow: string;
+  bgHover: string;
+  variants: any;
+}
 
 export default function Home() {
   const containerVariants = {
@@ -148,7 +160,7 @@ export default function Home() {
   );
 }
 
-function FeatureCard({ icon, title, description, link, color, glow, bgHover, variants }: any) {
+function FeatureCard({ icon, title, description, link, color, glow, bgHover, variants }: FeatureCardProps) {
   return (
     <motion.div variants={variants} whileHover={{ y: -8, scale: 1.02 }} transition={{ type: "spring", stiffness: 400, damping: 25 }}>
       <Link to={link} className={`group block h-full p-8 rounded-2xl bg-dark-bg border border-white/5 transition-all duration-300 ${color} ${glow} ${bgHover} relative overflow-hidden`}>
